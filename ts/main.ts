@@ -20,12 +20,36 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+// import { HTTPServer, IncomingHTTPRequest, OutgoingHTTPResponse } from "@t99/http-server";
+import SpotifyWebApi from "spotify-web-api-node";
+
 /**
  * NPM main class used for exporting this package's contents.
  *
  * @author Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/)
- * @version v<version>
- * @since v<version>
+ * @version v0.1.0
+ * @since v0.1.0
  */
 
-// export { ClassName } from "./class-location";
+export async function main(): Promise<void> {
+	
+	// let server: HTTPServer = await HTTPServer.initialize(1711);
+	//
+	// server.attachHandler(async (request: IncomingHTTPRequest, response: OutgoingHTTPResponse): Promise<void> => {
+	//	
+	// 	console.log("Request handled.");
+	// 	response.setBody("Hello, world!");
+	// 	await response.send();
+	//	
+	// });
+	
+	let spotify: SpotifyWebApi = new SpotifyWebApi({
+		clientId: "5d34ac821e4a438391f309c37a529b90",
+		clientSecret: "a6b0bc3347444d1eab1e4dd4c25d2af9"
+	});
+	
+	console.log(await spotify.getShowEpisodes("5aEsPtN61qhf1mxTrrcgOt"));
+	
+}
+
+main().catch(console.error);

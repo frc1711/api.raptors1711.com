@@ -1,7 +1,7 @@
 {
-	"name": "<name>",
-	"version": "<version>",
-	"description": "<desc>",
+	"name": "api.raptors1711.com",
+	"version": "0.1.0",
+	"description": "An API for the RAPTORS website.",
 	"main": "js/main",
 	"types": ".d.ts/main",
 	"scripts": {
@@ -10,15 +10,20 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/<github_org>/<base_name>.git"
+		"url": "git+https://github.com/frc1711/api.raptors1711.com.git"
 	},
 	"keywords": [],
 	"author": "Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/)",
 	"license": "GPL-3.0-or-later",
 	"bugs": {
-		"url": "https://github.com/<github_org>/<base_name>/issues"
+		"url": "https://github.com/frc1711/api.raptors1711.com/issues"
 	},
-	"homepage": "https://github.com/<github_org>/<base_name>#readme",
+	"homepage": "https://github.com/frc1711/api.raptors1711.com#readme",
+	"dependencies": {
+		"@t99/http": "^0.1.0",
+		"@t99/http-server": "^0.1.0",
+		"spotify-web-api-node": "^5.0.2"
+	},
 	"devDependencies": {
 		"typescript": "latest",
 		"tslint": "latest",
@@ -29,6 +34,7 @@
 		"gulp-typescript": "latest",
 		"gulp-uglify-es": "latest",
 		"jest": "latest",
-		"ts-jest": "latest"
+		"ts-jest": "latest",
+		"@types/spotify-web-api-node": "^5.0.7"
 	}
 }
